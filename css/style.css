@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Work Sans", serif;
+}
+header {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff4e6;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 2rem;
+}
+nav .logo h1 {
+  font-weight: 700;
+  font-size: 30px;
+  color: rgb(19, 19, 19);
+}
+nav .links a {
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  padding-right: 2rem;
+  color: rgb(19, 19, 19);
+}
+nav #slidebar-active {
+  display: none;
+}
+.open,
+.close {
+  display: none;
+}
+nav svg {
+  fill: #0f1013;
+}
+@media (max-width: 626px) {
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 2rem;
+    right: -100%;
+    z-index: 10;
+    width: 200px;
+    background-color: #fff4e6;
+  }
+  .links a {
+    padding: 20px 30px;
+    text-align: center;
+  }
+  .open,
+  .close {
+    display: block;
+    padding: 20px;
+    fill: #0f1013;
+  }
+  #slidebar-active:checked ~ .links {
+    right: 0px;
+  }
+}
