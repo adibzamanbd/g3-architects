@@ -8,7 +8,7 @@ body {
 }
 header {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #fff4e6;
 }
 nav {
@@ -49,29 +49,73 @@ nav svg {
 }
 .banner h1 {
   padding: 0 35%;
-  font-size: 34px;
+  font-size: 2.6rem;
   font-weight: 700;
 }
-.banner h4 {
+h4 {
   color: #727272;
   font-size: 14px;
   font-weight: 400;
-  padding: 1rem 10%;
   line-height: 20px;
+  padding-top: 2%;
 }
-.banner button{
-    width: 170px;
-    height: 64px;
-    background-color: #FF900E;
-    color: #FFF4E6;
-    border: none;
-    font-size: 17px;
-    border-radius: 8px;
-    margin-bottom: 25px;
+button {
+  width: 170px;
+  height: 64px;
+  background-color: #ff900e;
+  color: #fff4e6;
+  border: none;
+  font-size: 17px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  margin-top: 2%;
 }
-.banner img{
-    width: 90%;
-    padding-bottom: 50px;
+.banner img {
+  width: 90%;
+  padding-bottom: 50px;
+}
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2%;
+  gap: 5%;
+  margin: 5% 0;
+}
+.images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.images img {
+  width: 100%;
+}
+.text {
+  max-width: 35%;
+}
+.title {
+  padding-bottom: 5%;
+}
+.Quick-list {
+  color: #727272;
+  font-weight: 400;
+  line-height: 50px;
+  font-size: 3rem;
+}
+.text h1 {
+  color: #000000;
+  line-height: 50px;
+  font-size: 3rem;
+}
+.text-primary {
+  color: #ff900e;
+  line-height: 50px;
+  font-size: 3rem;
+}
+.text h4 {
+  padding-bottom: 5%;
 }
 
 @media (max-width: 626px) {
@@ -84,15 +128,15 @@ nav svg {
     right: -100%;
     z-index: 10;
     width: 200px;
-    height: 100%;
+    height: 200%;
     background-color: #fff4e6;
   }
   .links a {
     padding: 20px 30px;
-    
+
     text-align: center;
   }
-  .close{
+  .close {
     margin-top: 30px;
   }
   .open,
@@ -103,5 +147,28 @@ nav svg {
   }
   #slidebar-active:checked ~ .links {
     right: 0px;
+  }
+}
+@media (max-width: 750px) {
+  main {
+    flex-direction: column;
+  }
+  .text {
+    max-width: 90%;
+    text-align: center;
+    margin: 5% 0;
+  }
+  .title {
+    padding-bottom: 2%;
+  }
+  .text h4 {
+    padding-bottom: 2%;
+  }
+}
+@media (max-width: 533px) {
+  .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100%);
+    justify-content: center;
   }
 }
