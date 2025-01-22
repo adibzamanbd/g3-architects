@@ -157,23 +157,21 @@ h4 {
   background-color: #ff900e;
   color: #fff4e6;
   border: none;
-  font-size: 1.3rem;
   border-radius: 8px;
-  margin-left: -30px;
-  margin-top: -110px;
 }
 .main-text {
-  font-size: 3rem;
+  font-size: 3vw;
   padding: 5% 5%;
 }
 .h4-text {
-  font-size: 1.3rem;
+  font-size: 1.3vw;
   padding: 5% 5%;
 }
 .fact {
   width: 100%;
   height: 100%;
   padding: 5% 5%;
+  position: relative;
 }
 h3 {
   font-size: 2.8rem;
@@ -184,10 +182,12 @@ h4 {
   color: #727272;
 }
 .facts-cont {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  align-items: center;
 }
-.facts-card  {
+.facts-card {
   border: 1px solid #ff900e;
   width: 240px;
   height: 240px;
@@ -197,6 +197,7 @@ h4 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 2%;
 }
 .facts-card h1 {
   font-size: 2.8rem;
@@ -208,6 +209,43 @@ h4 {
   font-size: 1.25rem;
   font-weight: 600;
   margin-top: 10px;
+}
+.sponser {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.sponser h3 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.sponser h5 {
+  color: #727272;
+  font-weight: 400;
+  margin-top: 3%;
+  max-width: 50%;
+  text-align: center;
+  font-size: 16px;
+}
+.sponser-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.sponser-cont img {
+  filter: grayscale(100%);
+  margin: 3%;
 }
 
 @media (max-width: 626px) {
@@ -241,7 +279,7 @@ h4 {
     right: 0px;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 924px) {
   main {
     flex-direction: column;
   }
@@ -279,13 +317,6 @@ h4 {
     justify-content: center;
   }
 }
-@media (max-width: 1136px) {
-  .facts-cont {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 250px);
-    gap: 5%;
-  }
-}
 @media (max-width: 991px) {
   .fact {
     text-align: center;
@@ -293,7 +324,7 @@ h4 {
   h4 {
     max-width: 100%;
   }
-  .facts-cont{
+  .facts-cont {
     justify-content: center;
   }
 }
